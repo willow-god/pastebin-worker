@@ -30,7 +30,9 @@ BASE_URL = "https://share.lius.me"
 REPO = "https://github.com/willow-god/pastebin-worker"
 
 # url to the favicon
-FAVICON = "https://sharzy.in/favicon-32x32.png"
+FAVICON = "https://pic.imgdb.cn/item/66a0b2b2d9c307b7e9195143.png"
+
+# "https://sharzy.in/favicon-32x32.png"
 
 # the name displayed in TOS
 TOS_MAINTAINER = "LiuShen"
@@ -43,3 +45,8 @@ CACHE_STATIC_PAGE_AGE = 7200
 
 # Cache-Control max-age for static pages
 CACHE_PASTE_AGE = 600
+
+TITLE = "清羽飞扬の内容中转站"
+
+BG_URL = "https://pic.imgdb.cn/item/66a0b340d9c307b7e919c2e1.webp"
+

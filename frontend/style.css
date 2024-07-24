@@ -31,7 +31,7 @@ body {
 }
 
 :root {
-    --color-bg: #ffffff;
+    --color-bg: rgba(255, 255, 255, 0.7);
     --color-bg-secondary: #f0f0f0;
     --color-border: #ddd;
     --color-shadowed: #e0e0e0;
