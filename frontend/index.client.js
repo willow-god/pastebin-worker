@@ -88,11 +88,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const adminUrlValid = urlType !== 'admin' || isAdminUrlLegal(adminUrl)
 
     if (!pasteNotEmpty) {
-      disableSubmitButton('Paste is empty')
+      disableSubmitButton('文本为空或文件未选择')
     } else if (!expirationValid) {
-      disableSubmitButton(`Expiration “${expiration}” not valid`)
+      disableSubmitButton(`你填写的有效期限 “${expiration}” 格式无效`)
     } else if (!nameValid) {
-      disableSubmitButton(`The customized URL should satisfy regex ${NAME_REGEX}`)
+      disableSubmitButton(`自定义URL应满足正则表达式 ${NAME_REGEX}`)
     } else if (!adminUrlValid) {
       disableSubmitButton(`Admin URL “${adminUrl}” not valid`)
     } else {
@@ -101,10 +101,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (urlType === 'admin') {
-      submitButton.text('Update')
+      submitButton.text('更新')
       deleteButton.removeClass('hidden')
     } else {
-      submitButton.text('Submit')
+      submitButton.text('提交')
       deleteButton.addClass('hidden')
     }
 
@@ -113,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
       submitButton.prop('title', '')
     } else {
       deleteButton.removeClass('enabled')
-      submitErrMsg.text(`The admin URL should start with “${base_url}” and contain a colon`)
+      submitErrMsg.text(`管理链接应该开始于 “${base_url}” 并包含一个冒号，后面跟随密码`)
     }
   }
 
