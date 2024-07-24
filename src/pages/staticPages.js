@@ -13,6 +13,8 @@ function indexPage(env) {
     .replaceAll("{{BASE_URL}}", env.BASE_URL)
     .replaceAll("{{REPO}}", env.REPO)
     .replaceAll("{{FAVICON}}", env.FAVICON)
+    .replaceAll("{{TITLE}}", env.TITLE)
+    .replaceAll("{{BG_URL}}", env.BG_URL)
 }
 
 export function getStaticPage(path, env) {
@@ -23,6 +25,8 @@ export function getStaticPage(path, env) {
       .replaceAll("{{TOS_MAINTAINER}}", env.TOS_MAINTAINER)
       .replaceAll("{{TOS_MAIL}}", env.TOS_MAIL)
       .replaceAll("{{BASE_URL}}", env.BASE_URL)
+      .replaceAll("{{TITLE}}", env.TITLE)
+      .replaceAll("{{BG_URL}}", env.BG_URL)
 
     return makeMarkdown(tosMdRenderred)
   } else if (path === "/api" || path === "/api.html") {
